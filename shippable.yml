@@ -10,7 +10,9 @@ install:
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
-  - ln -s coverage.xml shippable/codecoverage/coverage.xml
+
+after_script:
+  - cp coverage.xml shippable/codecoverage/
 
 script:
   - python -m pytest -vv tests --cov atomicapp --cov-report=xml --junit-xml=shippable/testresults/result.xml
