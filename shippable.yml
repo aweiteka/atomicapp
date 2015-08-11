@@ -7,6 +7,13 @@ install:
   - pip install -r requirements.txt
   - pip install pytest-cov coveralls
 
-script:
-  - python -m pytest -vv tests --cov atomicapp
+before_script:
+  - mkdir -p shippable/testresults
+  - mkdir -p shippable/codecoverage
+  - ln -s coverage.xml shippable/codecoverage/coverage.xml
 
+script:
+  - python -m pytest -vv tests --cov atomicapp --cov-report=xml --junit-xml=shippable/testresults/result.xml
+
+env:
+  - XUNIT_FILE=shippable/testresults/result.xml
