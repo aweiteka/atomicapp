@@ -10,7 +10,7 @@ support OpenShift3 and Kubernetes.
 
 === List of providers
 
-Atomic App 0.1.0 includes three providers: 
+Atomic App 0.1.2 includes three providers: 
 
 * Docker, which is the most simple one
 * Kubernets
@@ -80,7 +80,7 @@ As of 0.1.0 of Atomic App, only
 http://docs.openshift.org/latest/dev_guide/templates.html[OpenShift templates] will be
 preprocessed by Atomic App during the run phase: parameters within a
 template file will be replaced by the
-https://github.com/projectatomic/nulecule/blob/master/spec/0.0.2/README.md#paramsObject[params]
+https://github.com/projectatomic/nulecule/blob/master/spec/README.md#paramsObject[params]
 supplied to Atomic App, names need to match.
 
 ==== configuration values
@@ -88,6 +88,6 @@ supplied to Atomic App, names need to match.
 .OpenShift3 Provider configuration values
 [frame="topbot",grid="none",options="header",cols="3,1,10,5"]
 |====================================================
-|keyword |required |description |default value 
+|keyword |required |description |default value
 |openshiftconfig|yes|Path to OpenShift config file|none
 |====================================================
