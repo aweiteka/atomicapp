@@ -1,5 +1,5 @@
 FROM centos:centos7
-
+hello, world
 MAINTAINER Vaclav Pavlin <vpavlin@redhat.com>
 
 WORKDIR /opt/atomicapp
